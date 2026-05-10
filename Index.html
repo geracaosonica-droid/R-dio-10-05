@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Geração Sônica — Rádio Ao Vivo</title>
-    <!-- Ligação com o arquivo de estilo -->
     <link rel="stylesheet" href="estilo-principal.css">
-    <!-- Ícone do aplicativo -->
     <link rel="icon" href="icone-app.png">
 </head>
 <body>
-    <!-- Cabeçalho superior -->
     <div class="cabecalho-topo">
         <button class="botao-menu">☰</button>
         <div class="indicadores-sinal">
@@ -19,38 +16,33 @@
         </div>
     </div>
 
-    <!-- Nome da Rádio -->
     <h1 class="nome-radio">GERAÇÃO SÔNICA</h1>
     <div class="ondas-audio-cima"></div>
 
-    <!-- Indicador ao vivo -->
     <div class="indicador-ao-vivo">🔴 RÁDIO AO VIVO</div>
 
-    <!-- Círculo central com efeito neon -->
     <div class="circulo-neon">
         <div class="ondas-centrais"></div>
     </div>
 
-    <!-- Imagem da capa principal -->
+    <!-- A foto que você enviar como tela-inicial.png vai aparecer aqui -->
     <div class="area-central">
         <img src="tela-inicial.png" alt="Capa da Rádio Geração Sônica" class="imagem-tela-principal">
     </div>
 
-    <!-- Botão principal para tocar suas músicas -->
     <div class="container-botao">
-        <a href="COLE_AQUI_O_SEU_LINK_DO_VLC" target="_blank" class="btn-principal">
+        <!-- Botão pronto — depois é só trocar o link aqui quando tiver -->
+        <button class="btn-principal" onclick="alert('Em breve! Suas músicas exclusivas aqui 🎶')">
             ▶️ LIGAR MINHA RÁDIO AGORA
-        </a>
+        </button>
     </div>
 
-    <!-- Informação do que está tocando -->
     <div class="info-tocando">
         <p class="texto-pequeno">TOCANDO AGORA</p>
         <p class="musica-atual">SUAS MÚSICAS EXCLUSIVAS</p>
         <p class="nome-radio-pequeno">Geração Sônica</p>
     </div>
 
-    <!-- Barra de navegação inferior -->
     <nav class="barra-navegacao">
         <div class="item-nav ativo">
             <span class="icone-nav">📻</span>
@@ -74,7 +66,5 @@
         </div>
     </nav>
 
-    <!-- Arquivo que fará a navegação funcionar -->
-    <script src="navegacao.js"></script>
 </body>
 </html>
