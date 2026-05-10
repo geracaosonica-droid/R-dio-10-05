@@ -1,0 +1,204 @@
+/* Cores oficiais da Rádio Geração Sônica */
+:root {
+    --roxo-neon: #9933ff;
+    --azul-neon: #00ccff;
+    --rosa-neon: #ff33ff;
+    --preto-fundo: #0a0426;
+    --brilho: 0 0 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #1b0b4d 0%, var(--preto-fundo) 70%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+}
+
+/* Cabeçalho superior */
+.cabecalho-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.botao-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.indicadores-sinal {
+    color: white;
+    font-size: 18px;
+}
+
+/* Nome da Rádio */
+.nome-radio {
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(90deg, var(--rosa-neon), var(--azul-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--brilho) var(--rosa-neon);
+    margin: 20px 0;
+    letter-spacing: 3px;
+}
+
+.ondas-audio-cima {
+    height: 20px;
+    background: url('ondas-neon.png') center/contain no-repeat;
+    margin: 0 auto 30px;
+    width: 80%;
+    filter: drop-shadow(0 0 10px var(--roxo-neon));
+}
+
+/* Indicador ao vivo piscando */
+.indicador-ao-vivo {
+    background: #1a0b4d;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 2px solid var(--roxo-neon);
+    box-shadow: var(--brilho) var(--roxo-neon);
+    width: fit-content;
+    margin: 0 auto 40px;
+    animation: piscar 1.5s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Círculo central neon */
+.circulo-neon {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, transparent 60%, var(--roxo-neon) 100%);
+    box-shadow: var(--brilho) var(--roxo-neon), var(--brilho) var(--azul-neon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ondas-centrais {
+    width: 85%;
+    height: 85%;
+    background: url('ondas-centro.png') center/contain no-repeat;
+    filter: drop-shadow(0 0 15px var(--azul-neon));
+}
+
+/* Área da capa principal */
+.area-central {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.imagem-tela-principal {
+    width: 90%;
+    max-width: 400px;
+    filter: drop-shadow(0 0 20px var(--rosa-neon));
+    border-radius: 20px;
+}
+
+/* Botão principal para tocar */
+.container-botao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--azul-neon), var(--roxo-neon));
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 0 30px rgba(0, 204, 255, 0.6), 0 0 40px rgba(153, 51, 255, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-principal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px var(--rosa-neon), 0 0 50px var(--azul-neon);
+}
+
+/* Informação do que está tocando */
+.info-tocando {
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.texto-pequeno {
+    font-size: 16px;
+    color: var(--rosa-neon);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.musica-atual {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.nome-radio-pequeno {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+/* Barra de navegação inferior */
+.barra-navegacao {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 4, 38, 0.95);
+    border-top: 2px solid var(--roxo-neon);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    box-shadow: 0 -5px 20px rgba(153, 51, 255, 0.3);
+}
+
+.item-nav {
+    text-align: center;
+    color: #888888;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.item-nav.ativo {
+    color: var(--rosa-neon);
+    text-shadow: var(--brilho) var(--rosa-neon);
+    transform: scale(1.1);
+}
+
+.icone-nav {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 5px;
+}
